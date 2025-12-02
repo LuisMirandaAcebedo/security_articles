@@ -9,7 +9,7 @@ El problema es que la implementación de seguridad de al menos uno de estos disp
 En este artículo vamos a analizar las vulnerabilidades encontradas en la **baliza Help Flash IoT**, un dispositivo que según Vodafone ha vendido más de 250.000 unidades en España. 
 Aviso: no vas a necesitar ser un hacker  para entender por qué esto es preocupante.
 
-![[pictures/Pasted image 20251202112301.png]]
+!https://github.com/LuisMirandaAcebedo/security_articles-/blob/main/help_flash_iot/pictures/Pasted%20image%20251202112301.png
 
 A pesar de que los ejemplos de fallos de seguridad se centran en este modelo examinado, los problemas de seguridad encontrados en la parte de comunicaciones parecen ser **comunes a todos los dispositivos**, pues otros modelos también examinados tienen el mismo funcionamiento y los mismos problemas.
 
