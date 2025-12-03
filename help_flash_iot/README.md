@@ -42,7 +42,7 @@ Es como si en lugar de llamar discretamente a emergencias, gritaras tu direcció
 Además de enviar los datos en claro, hay otro problema, la **conexión no está autenticada**. Esto significa que el receptor no puede verificar que el mensaje llega de quién se supone que tiene que llegar.
 
 <p align="left" width="100%">
-    <img width="80%" src="https://github.com/LuisMirandaAcebedo/security_articles-/blob/main/help_flash_iot/pictures/Pasted%20image%2020251126203844.png">
+    <img width="70%" src="https://github.com/LuisMirandaAcebedo/security_articles-/blob/main/help_flash_iot/pictures/Pasted%20image%2020251126203844.png">
 </p>
 
 
@@ -60,7 +60,7 @@ Del análisis del puerto serie del dispositivo (sí, tiene un puerto de depuraci
 - etc...
 
 <p align="left" width="100%">
-    <img width="100%" src="https://github.com/LuisMirandaAcebedo/security_articles-/blob/main/help_flash_iot/pictures/Pasted%20image%2020251126204723.png">
+    <img width="80%" src="https://github.com/LuisMirandaAcebedo/security_articles-/blob/main/help_flash_iot/pictures/Pasted%20image%2020251126204723.png">
 </p>
 
 
@@ -165,8 +165,8 @@ Aquí es donde la cosa se pone realmente interesante. El dispositivo tiene un si
 
 No hace falta PIN. No hace falta contraseña. No hace falta confirmación en una app móvil. Solo acceso al botón. Ocho segundos.
 
-<p align="center" width="100%">
-    <img width="100%" src="https://github.com/LuisMirandaAcebedo/security_articles-/blob/main/help_flash_iot/pictures/Pasted%20image%2020251126203617.png">
+<p align="left" width="100%">
+    <img width="80%" src="https://github.com/LuisMirandaAcebedo/security_articles-/blob/main/help_flash_iot/pictures/Pasted%20image%2020251126203617.png">
 </p>
 
 ### Credenciales Compartidas: Porque la Seguridad es Cosa de Todos
@@ -247,13 +247,13 @@ He desarrollado una prueba de concepto completa que demuestra lo fácil que es c
 Para los frikis, aquí podéis ver el log de mi servidor de actualizaciones falso que utilicé para las pruebas.
 
 <p align="left" width="100%">
-    <img width="100%" src="https://github.com/LuisMirandaAcebedo/security_articles-/blob/main/help_flash_iot/pictures/Pasted%20image%2020251202154325.png">
+    <img width="75%" src="https://github.com/LuisMirandaAcebedo/security_articles-/blob/main/help_flash_iot/pictures/Pasted%20image%2020251202154325.png">
 </p>
 
 Y aquí el log del dispositivo cuando la actualización remota se inicia de forma correcta y comienza a descargarse el firmware malicioso que preparé.
 
 <p align="left" width="100%">
-    <img width="100%" src="https://github.com/LuisMirandaAcebedo/security_articles-/blob/main/help_flash_iot/pictures/Pasted%20image%2020251129135450.png">
+    <img width="70%" src="https://github.com/LuisMirandaAcebedo/security_articles-/blob/main/help_flash_iot/pictures/Pasted%20image%2020251129135450.png">
 </p>
 
 ### Resultado
@@ -269,7 +269,7 @@ Una vez instalado el firmware malicioso, el control del dispositivo es total. Po
 - ...
 
 <p align="left" width="100%">
-    <img width="80%" src="https://github.com/LuisMirandaAcebedo/security_articles-/blob/main/help_flash_iot/pictures/Pasted%20image%2020251126203211.png">
+    <img width="65%" src="https://github.com/LuisMirandaAcebedo/security_articles-/blob/main/help_flash_iot/pictures/Pasted%20image%2020251126203211.png">
 </p>
 
 ## Efecto Cascada: Cuando Todo se Desmorona
