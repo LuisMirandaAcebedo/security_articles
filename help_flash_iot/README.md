@@ -7,7 +7,7 @@ Desde 2026, las balizas V16 conectadas sustituyen obligatoriamente a los triáng
 El problema es que la implementación de seguridad de al menos uno de estos dispositivos es... digamos que *optimista*. Tanto, que cualquiera con un portátil y conocimientos básicos podría convertir tu baliza de emergencia en algo bastante menos útil que un pisapapeles luminoso.
 
 En este artículo vamos a analizar las vulnerabilidades encontradas en la **baliza Help Flash IoT**, un dispositivo que según Vodafone ha vendido más de 250.000 unidades en España. 
-Aviso: no vas a necesitar ser un hacker  para entender por qué esto es preocupante.
+Aviso: no vas a necesitar ser un hacker  para entender por qué esto es preocupante. Pondré logs del dispositivo y de mis pruebas para los que los que estéis familiarizados con módems (comandos AT) y Networking entendáis un poco mejor de lo que hablo.
 
 <p align="center" width="100%">
     <img width="50%" src="https://github.com/LuisMirandaAcebedo/security_articles-/blob/main/help_flash_iot/pictures/Pasted%20image%2020251202112301.png">
