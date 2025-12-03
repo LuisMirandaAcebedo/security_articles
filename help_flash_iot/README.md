@@ -321,37 +321,6 @@ No estamos hablando de hackear una bombilla inteligente o un robot aspirador. Es
 - Gestiona situaciones de vida o muerte
 - Ha sido **homologado** y aprobado oficialmente
 
-## Recomendaciones: Cómo Arreglar Este Desastre
-
-### Críticas (Hacerlo YA)
-
-1. **Implementar HTTPS con pinning de certificados**: Usa TLS 1.3 para todas las comunicaciones OTA. No es 1995.
-
-2. **Firmar digitalmente el firmware**: Cada actualización debe estar firmada criptográficamente. El dispositivo debe verificar la firma antes de instalar nada.
-
-3. **Autenticación mutua**: El dispositivo verifica el servidor, el servidor verifica el dispositivo. Con certificados de verdad.
-
-4. **Credenciales únicas por dispositivo**: Cada baliza debe tener su propio SSID y contraseña únicos, generados aleatoriamente en fábrica.
-
-5. **Autenticación de usuario para OTA**: PIN, confirmación por app móvil, dos factores... lo que sea, pero algo más que 8 segundos de botón.
-
-### Importantes (Hacerlo Pronto)
-
-6. **Actualizar ESP-IDF**: El firmware usa ESP-IDF v4.3.2 de 2021. Hay versión 5.x con mejoras de seguridad importantes.
-
-7. **Activar Secure Boot y Flash Encryption**: El ESP32-C3 tiene estas características. Úsalas.
-
-8. **Cifrar comunicaciones celulares**: DTLS sobre UDP, o cambiar a TCP/TLS. Pero cifrar, por favor.
-
-9. **Proteger el puerto de depuración**: Al menos pon una contraseña o deshabilítalo en producción.
-
-### Recomendables (Para Dormir Más Tranquilos)
-
-10. **Implementar detección de anomalías en el servidor**: Si un dispositivo empieza a comportarse raro, el servidor debería notarlo.
-
-11. **Rate limiting y anti-replay**: Para evitar ataques de repetición y DoS.
-
-12. **Monitorización y alertas**: Si alguien está comprometiendo dispositivos masivamente, deberíais enteraros.
 
 ## La Respuesta de INCIBE: Cuando "Físico" No Es Tan Físico
 
