@@ -16,6 +16,17 @@ Aviso: no vas a necesitar ser un hacker  para entender por qué esto es preocupa
 
 A pesar de que los ejemplos de fallos de seguridad se centran en este modelo examinado, los problemas de seguridad encontrados en la parte de comunicaciones parecen ser **comunes a todos los dispositivos**, pues otros modelos también examinados tienen el mismo funcionamiento y los mismos problemas.
 
+Grosso modo, el funcionamiento de estos dispositivos se basa en el siguiente esquema:
+- La baliza, una vez encendida por el usuario, intenta obtener coordenadas GPS y se conecta por NB-IoT al operador de telefonía.
+- Cada cierto tiempo envía un mensaje a un servidor del propio fabricante donde indica parámetros como la hora de la incidencia, coordenadas GPS, identificadores del dispositivo, etc.
+- El servidor del fabricante y la baliza no transmiten datos a través de internet, si no que el operador les da conectividad por medio de lo que se conoce como APN privado. Esto es una red privada y aislada.
+- El servidor del fabricante procesa los mensajes que recibe de sus balizas y envía, ahora sí, a través de internet, las alertas a los servidores de la DGT3.0
+- DGT3.0 distribuye las alertas a aplicaciones de navegación (Google Maps, Waze, ...), a los paneles luminosos de las autopistas/autovías, y a otras aplicaciones.
+
+<p align="center" width="100%">
+    <img width="100%" src="https://github.com/LuisMirandaAcebedo/security_articles-/blob/main/help_flash_iot/pictures/Pasted%20image%2020251203123335.png">
+</p>
+
 ## Primera Vulnerabilidad: Comunicaciones al Descubierto
 
 ### El Problema: Hablando en Voz Alta con la Cara Tapada
@@ -23,7 +34,7 @@ A pesar de que los ejemplos de fallos de seguridad se centran en este modelo exa
 Imagina que estás en una emergencia en la carretera. Activas tu baliza V16 y esta envía tu ubicación exacta, el identificador de tu dispositivo, y toda la información de red a los servidores de la DGT. Genial, ¿verdad? El problema es que **lo hace todo en texto plano**, sin ningún tipo de cifrado.
 
 <p align="center" width="100%">
-    <img width="50%" src="https://github.com/LuisMirandaAcebedo/security_articles-/blob/main/help_flash_iot/pictures/Pasted%20image%2020251202132441.png">
+    <img width="50%" src="https://github.com/LuisMirandaAcebedo/security_articles-/blob/main/help_flash_iot/pictures/Pasted%20image%2020251203113720.png">
 </p>
 
 Es como si en lugar de llamar discretamente a emergencias, gritaras tu dirección exacta por un megáfono para que todo el vecindario se entere. Pero en este caso, "el vecindario" es cualquiera que pueda estar monitorizando el tráfico de red.
