@@ -367,7 +367,7 @@ Este caso es un ejemplo perfecto de cómo NO hacer seguridad en IoT:
 
 ✗ Comunicaciones sin cifrar  
 ✗ Sin autenticación de servidor  
-✗ Sin mecanismo de integridad en los mensajes
+✗ Sin mecanismo de integridad en los mensajes  
 ✗ Credenciales hardcodeadas compartidas  
 ✗ HTTP en lugar de HTTPS  
 ✗ Sin firma digital de firmware  
