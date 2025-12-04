@@ -19,7 +19,7 @@ A pesar de que los ejemplos de fallos de seguridad se centran en este modelo exa
 Grosso modo, el funcionamiento de estos dispositivos se basa en el siguiente esquema:
 - La baliza, una vez encendida por el usuario, intenta obtener coordenadas GPS y se conecta por NB-IoT al operador de telefonía.
 - Cada cierto tiempo envía un mensaje a un servidor del propio fabricante donde indica parámetros como la hora de la incidencia, coordenadas GPS, identificadores del dispositivo, etc.
-- El servidor del fabricante y la baliza no transmiten datos a través de internet, si no que el operador les da conectividad por medio de lo que se conoce como APN privado. Esto es una red privada y aislada.
+- El servidor del fabricante y la baliza no transmiten datos a través de internet, sino que el operador les da conectividad por medio de lo que se conoce como APN privado. Esto es una red privada y aislada.
 - El servidor del fabricante procesa los mensajes que recibe de sus balizas y envía, ahora sí, a través de internet, las alertas a los servidores de la DGT3.0
 - DGT3.0 distribuye las alertas a aplicaciones de navegación (Google Maps, Waze, ...), a los paneles luminosos de las autopistas/autovías, y a otras aplicaciones.
 
@@ -74,7 +74,7 @@ Me llama la atención la **ausencia de mecanismos de integridad del mensaje**, a
 
 3. **Integridad cero**: No hay forma de verificar que los datos no han sido modificados en tránsito. Potencialmente se podría alterar tu ubicación reportada si alguien intercepta el mensaje y lo modifica.
 
-El operador de turno te dirá que todo esto está muy bien, pero que la baliza no se conecta directamente a internet, si no a una red privada sobre la que tienen completo control y, por lo tanto, nadie puede ni interceptar ni modificar ni conectarse a esta red para hacer maldades. En teoría, esto es así. En teoría.
+El operador de turno te dirá que todo esto está muy bien, pero que la baliza no se conecta directamente a internet, sino a una red privada sobre la que tienen completo control y, por lo tanto, nadie puede ni interceptar ni modificar ni conectarse a esta red para hacer maldades. En teoría, esto es así. En teoría.
 
 ### La Excusa del APN Privado
 
