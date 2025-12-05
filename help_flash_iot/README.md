@@ -406,6 +406,7 @@ Esta investigación se realizó de forma completamente legal y ética:
 
 **Investigador**: Luis Miranda Acebedo  
 **Contacto**: luis.miranda.acebedo@gmail.com  
+**Fecha publicación**: 05/12/2025
 
 ---
 
