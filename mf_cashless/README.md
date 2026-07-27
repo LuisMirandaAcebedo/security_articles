@@ -6,17 +6,25 @@
 
 En este artículo contaré mi experiencia jugando con pulseras de un sistema Cashless de los que nos podemos encontrar en eventos como festivales, en los que tanto la entrada como todos los pagos dentro del recinto se gestionan con esta pulsera[^1]. La integridad del saldo que "depositamos" en el dispositivo (en realidad en todo un sistema) depende de su seguridad, y no siempre es perfecta…
 
-![Pulsera de festival Cashless](pics/01-pulsera-cashless-festival.png)
+<div align="center">
+  <img src="pics/01-pulsera-cashless-festival.png" alt="Pulsera de festival Cashless" width="600">
+  <br>
+  <em>Fig. 1: Pulsera tipo Cashless utilizada en festivales para entradas y pagos.</em>
+</div>
 
 Tengo que dejar claro desde el principio que yo no soy un súper experto en tecnologías RFID (Identificación por Radiofrecuencia), pero desde hace muchos años he sentido interés por ellas y siempre que ha caído en mis manos una tarjeta o pulsera he tratado de analizarla y entender cómo funciona el sistema. También quiero dejar claro que a lo largo del artículo intentaré no entrar en detalles técnicos salvo cuando sea completamente necesario.
 
 Resumiendo muchísimo, una tarjeta RFID es un dispositivo que contiene información y que puede ser leída (y escrita, en algunos casos) sin contacto, ya sean unos pocos centímetros o unos pocos metros, en función de la tecnología empleada. Ejemplos pueden ser desde la "llave" sin contacto que muchos edificios tienen hoy en día para abrir la puerta del portal o del garaje (la acercas al lector y este se abre) a las etiquetas de los artículos de Decathlon, cuyas cajas detectan la presencia y cantidad de los artículos sólo con depositarlos en un espacio concreto donde se encuentran las antenas.
 
-![Ejemplo de tarjeta RFID](pics/02-rfid-ejemplo-tarjeta.png)
+<div align="center">
+  <img src="pics/02-rfid-ejemplo-tarjeta.png" alt="Ejemplo de tarjeta RFID" width="600">
+  <br>
+  <em>Fig. 2: Ejemplos de dispositivos RFID: desde llaves de garaje hasta etiquetas de tiendas.</em>
+</div>
 
-En el pasado he estudiado alguna tarjeta de pago de sistemas de vending. Se trataba de sistemas de monedero offline, esto es, el saldo se encontraba almacenado en la tarjeta y toda la seguridad recaía en la seguridad de la propia tarjeta y en mecanismos implementados para darle más integridad al contenido de la misma. En general solían ser bastante pirateables. Las que cayeron en mis manos usaban tecnología Mifare Classic y esta es bien conocida por varios fallos de seguridad[^ref1] y ataques prácticos que permiten explotarlos para acceder a todo el contenido de la tarjeta y manipularlo pese a estar protegidos por contraseña. A partir de ahí sólo había que encontrar dónde se almacenaba el saldo, en qué formato y qué funciones de checksum las máquinas usaban para comprobar que el contenido no se había manipulado. Nada que unas cuantas tardes de trabajo no solucionasen.
+En el pasado he estudiado alguna tarjeta de pago de sistemas de vending. Se trataba de sistemas de monedero offline, esto es, el saldo se encontraba almacenado en la tarjeta y toda la seguridad recaía en la seguridad de la propia tarjeta y en mecanismos implementados para darle más integridad al contenido de la misma. En general solían ser bastante pirateables. Las que cayeron en mis manos usaban tecnología Mifare Classic, un estándar que emplea un cifrado proprietary llamado Crypto1 para proteger la comunicación entre tarjeta y lector. Esta tecnología es bien conocida por varios fallos de seguridad[^ref1] y ataques prácticos que permiten explotarlos para acceder a todo el contenido de la tarjeta y manipularlo pese a estar protegidos por contraseña. A partir de ahí sólo había que encontrar dónde se almacenaba el saldo, en qué formato y qué funciones de checksum las máquinas usaban para comprobar que el contenido no se había manipulado. Nada que unas cuantas tardes de trabajo no solucionasen.
 
-El sistema de pago que vamos a analizar aquí es un sistema online, donde existe una infraestructura (servidor o en la nube) que centralizan los saldos y la información de las transacciones realizadas. Los lectores con los que cuentan tanto en los puntos de recarga como en los lugares donde se efectúan cobros, están conectados con esta infraestructura (la cual podemos ver como un servidor central, para simplificar).
+El sistema de pago que vamos a analizar aquí es un sistema online, donde existe una infraestructura (servidor o en la nube) que centraliza los saldos y la información de las transacciones realizadas. Los lectores con los que cuentan tanto en los puntos de recarga como en los lugares donde se efectúan cobros, están conectados con esta infraestructura (la cual podemos ver como un servidor central, para simplificar).
 
 ## La historia
 
@@ -34,7 +42,11 @@ El hardware que estaba usando para su estudio era el archiconocido (en el mundil
 
 Después de múltiples pruebas los resultados no llegaban, así que decidí ponerme en contacto con Philippe Teuwen, el autor del paper, con el que descubrí que "casualmente" compartíamos canales de Discord dedicados a ciberseguridad. Una tarde de domingo conectados, él desde Bélgica y yo en España, haciendo pruebas y más pruebas y finalmente mi pulsera sirvió para que Philippe incorporase a su estudio una nueva variante de chip, también susceptible de los ataques que estaba perfeccionando. Con sus técnicas podíamos obtener todas las claves de la tarjeta, lo que permitía leer y escribir la totalidad de su contenido (excepto escribir el identificador único, ya hablaré de él más adelante) con el Proxmark. Perfecto, yo había satisfecho mi curiosidad y él incorporaría los hallazgos a la próxima revisión de su paper, en la que prometía mencionar mi colaboración.
 
-![Contacto con Philippe Teuwen](pics/03-contacto-philippe.png)
+<div align="center">
+  <img src="pics/03-contacto-philippe.png" alt="Contacto con Philippe Teuwen" width="600">
+  <br>
+  <em>Fig. 3: Colaboración con Philippe Teuwen, autor del paper sobre vulnerabilidades en chips Mifare Classic mejorados.</em>
+</div>
 
 Ahí quedó la cosa hasta que unos meses después, cuando me disponía a comprar las entradas para el Resurrection 2025, vino a mi memoria toda esta historia y la conexión de la tecnología de ambas pulseras, asi que me propuse comprobar la pulsera de 2024, con las nuevas técnicas descubiertas (que no estaban disponibles durante la celebración de esa edición).
 
@@ -50,7 +62,11 @@ Puede parecer que esto hace el sistema mucho más seguro que un sistema offline,
 
 Así las cosas, llegada la fecha del festival de 2025, me llevé conmigo "un par" de aparatejos para ver si podía hacer pruebas in situ y validar mis hipótesis.
 
-![Equipo para el festival](pics/04-equipo-festival.png)
+<div align="center">
+  <img src="pics/04-equipo-festival.png" alt="Equipo para el festival" width="600">
+  <br>
+  <em>Fig. 4: El equipo de trabajo preparado para las pruebas in situ en el Resurrection Fest 2025.</em>
+</div>
 
 El plan estaba más o menos claro, seguiría los siguientes pasos hasta encontrarme con que alguna de mis hipótesis fallaba y ahí se quedaría la cosa.
 
@@ -76,7 +92,11 @@ Una vez subsanado el error, vuelvo a comprobar y sí, la tecnología identificad
 
 Otro paso sencillo, aunque un poco incómodo, hay que posicionar la pulsera sobre el lector y mantenerla hasta que termine el proceso.
 
-![Ataque con Proxmark3](pics/05-ataque-proxmark.png)
+<div align="center">
+  <img src="pics/05-ataque-proxmark.png" alt="Ataque con Proxmark3" width="600">
+  <br>
+  <em>Fig. 5: Ataque activo con Proxmark3 para la extracción de claves de la pulsera Mifare Classic.</em>
+</div>
 
 15 minutos de reflexión mientras los scripts de Philippe hacen su trabajo y listo. Todas las claves extraídas y contenido completo de la pulsera leído.
 
@@ -90,13 +110,17 @@ Ya que tengo esto listo el día 2 de festival, aprovecho para leer mi pulsera tr
 
 ### 5 y 6.- Comprobar si puedo clonar la tarjeta
 
-Uno de los mecanismos de seguridad con que cuentan, en la teoría, estas tarjetas es que cada una tiene un identificador único. Esto es, un código hexadecimal de 14 dígitos (7 bytes) que nunca se repite, cada pulsera, tarjeta, chip, tiene el suyo grabado de fábrica y no se puede modificar, con ningún tipo de dispositivo.
+Uno de los mecanismos de seguridad con que cuentan, en la teoría, estas tarjetas es que cada una tiene un identificador único. Esto es, un código hexadecimal de 14 dígitos (7 bytes) que nunca se repite, cada pulsera, tarjeta, chip, tiene el suyo grabado de fábrica y, en el caso de las tarjetas estándar, no se puede modificar con ningún tipo de dispositivo.
 
 Esto lo utilizan, por ejemplo, los sistemas de apertura de portales de muchos edificios o sistemas de control de acceso de gimnasios. Simplemente tienen una serie de IDs dados de alta que reconocen como llaves legítimas y es lo único que comprueban. Leyendo ese ID y posteriormente emulando la tarjeta con un teléfono con NFC o con un Flipper Zero, por ejemplo, se puede abrir dicho portal o acceder al recinto con sólo haber tenido acceso a una llave legítima durante un par de segundos.
 
 Además existen lo que se conocen como Magic Cards, tarjetas vírgenes a las que se les puede grabar el ID que quieras, y modificarlo las veces que quieras. No son tarjetas originales y no cumplen el estándar en ese sentido, pero funcionan y la mayoría de los lectores no pueden diferenciarlas de una tarjeta legítima.
 
-![Ejemplo de Magic Card](pics/06-magic-card-ejemplo.png)
+<div align="center">
+  <img src="pics/06-magic-card-ejemplo.png" alt="Ejemplo de Magic Card" width="600">
+  <br>
+  <em>Fig. 6: Magic Card listada junto a una pulsera original. Permite grabar cualquier UID de forma reescribible.</em>
+</div>
 
 Así, grabo el contenido de mi pulsera en una Magic Card, incluído el ID, hago una lectura completa con el teléfono, le pido a la aplicación que compare ambas lecturas y, como era de esperar, son idénticas.
 
@@ -113,15 +137,23 @@ Para que sea así necesitaríamos:
 
 Como acercar un teléfono, un Flipper o un Proxmark a la muñeca de un desconocido podría resultar un poco sospechoso, vamos a diseñar una prueba de concepto de algo un poco más discreto.
 
-![Lector RFID discreto para lectura oculta](pics/07-lector-rfid-mochila.png)
+<div align="center">
+  <img src="pics/07-lector-rfid-mochila.png" alt="Lector RFID discreto para lectura oculta" width="600">
+  <br>
+  <em>Fig. 7: Lector RFID autónomo con microprocesador y tarjeta SD para lectura desatendida de credenciales.</em>
+</div>
 
 El dispositivo de la imagen no es más que un lector RFID, una placa con un microprocesador que intenta de forma contínua la lectura de una pulsera con las claves que hemos obtenido en pasos anteriores y que almacena el contenido de cada pulsera que lee en una tarjeta SD.
 
-Así, con acercar a 2-3 centímetros la zona de la mochila donde se encuentra el lector a la pulsera de cualquiera, el contenido completo (en realidad lo he simplificado y sólo leo los dos bloques de memoria que he comprobado que se utilizan) de ésta queda almacenado en la tarjeta SD.
+Así, con acercar a 2-3 centímetros la zona de la mochila donde se encuentra el lector a la pulsera de cualquiera, el contenido completo (en realidad lo he simplificado y sólo leo los dos sectores de memoria que he comprobado que se utilizan) de ésta queda almacenado en la tarjeta SD.
 
 Con esto, la primera parte queda resuelta. Nadie sospecharía en un recinto con 30.000 o 40.000 personas de alguien que, en la multitud, roza con su mochila su muñeca. Como el dispositivo hace lecturas contínuas, el sistema permite robar credenciales de forma más o menos masiva sin intervención, más allá de portar la mochila.
 
-![Prueba de efectividad con compañeros](pics/08-prueba-efectividad.png)
+<div align="center">
+  <img src="pics/08-prueba-efectividad.png" alt="Prueba de efectividad con compañeros" width="600">
+  <br>
+  <em>Fig. 8: Prueba de campo entre compañeros de festival confirmando la lectura oculta a distancia de contacto.</em>
+</div>
 
 Una breve prueba con mis compañeros de festival demuestra su efectividad.
 
@@ -129,11 +161,19 @@ Segunda parte, modificar una pulsera legítima para que mantenga su aspecto pero
 
 La forma más fácil que se me ocurre es anular el chip de la tarjeta original, ya sea mediante un pulso electromagnético (método no invasivo) o mediante un microcorte en la antena interna de la pulsera (método invasivo) y pegar en su parte trasera una Magic Card u ocultarla en las cercanías de algún modo.
 
-![Pulsera y Magic Card para modificación](pics/09-pulsera-despiece.png)
+<div align="center">
+  <img src="pics/09-pulsera-despiece.png" alt="Pulsera y Magic Card para modificación" width="600">
+  <br>
+  <em>Fig. 9: Pulsera original junto a los componentes de la Magic Card que serán integrados en ella.</em>
+</div>
 
 Las Magic Card de que dispongo son un poco aparatosas, así que lo suyo es desmontarla y aislar el chip y la antena para poder hacer algo discreto.
 
-![Magic Card desmontada con chip y antena](pics/10-magic-card-desmontaje.png)
+<div align="center">
+  <img src="pics/10-magic-card-desmontaje.png" alt="Magic Card desmontada con chip y antena" width="600">
+  <br>
+  <em>Fig. 10: Magic Card desmontada: chip y antena enrollada listos para ser trasplantados a la pulsera.</em>
+</div>
 
 Este sería el aspecto del conjunto, la nueva antena y el chip quedarían en la parte trasera de la pulsera ocultos por la banda de tela. La solución parece válida, pero…
 
@@ -141,13 +181,21 @@ Tras darle unas cuantas vueltas, me decido por una aproximación un poco más di
 
 La idea es hacer dos microcortes por la parte trasera de la pulsera desconectando el chip de su antena, soldar el chip de una Magic Card a la antena de la propia pulsera original, haciendo así el dispositivo resultante todavía más discreto y compacto.
 
-![Esquema de microcortes en la pulsera](pics/11-pulsera-microcortes.png)
+<div align="center">
+  <img src="pics/11-pulsera-microcortes.png" alt="Esquema de microcortes en la pulsera" width="600">
+  <br>
+  <em>Fig. 11: Esquema de los microcortes necesarios para desconectar el chip original de su antena.</em>
+</div>
 
 Para esto hay que inspeccionar la pulsera, y a falta de rayos X buena es una luz potente para poder ver las tripas del dispositivo.
 
 Marco las conexiones entre el chip y la antena, realizo unos pequeños y precisos cortes, y sueldo el chip de la Magic Card a la antena original de la pulsera.
 
-![Pulsera inspeccionada con luz para ver conexiones](pics/12-pulsera-inspeccion-luz.png)
+<div align="center">
+  <img src="pics/12-pulsera-inspeccion-luz.png" alt="Pulsera inspeccionada con luz para ver conexiones" width="600">
+  <br>
+  <em>Fig. 12: Inspección de la pulsera con luz intensa para localizar las pistas de conexión chip-antena.</em>
+</div>
 
 Realizo las pruebas oportunas para ver que la pulsera modificada, además de mantener su aspecto original, tiene todas las funcionalidades de una Magic Card.
 
@@ -155,7 +203,11 @@ Y con esto queda demostrado que la explotación real y práctica de la vulnerabi
 
 El flujo seguido por los ciberdelincuentes podría ser algo como sigue:
 
-![Flujo de ataque: Robo de credenciales → Clonado → Consumo → Saldo agotado → Nueva víctima](pics/13-flujo-ataque-placeholder.png)
+<div align="center">
+  <img src="pics/13-flujo-ataque-placeholder.png" alt="Flujo de ataque: Robo de credenciales → Clonado → Consumo → Saldo agotado → Nueva víctima" width="600">
+  <br>
+  <em>Fig. 13: Diagrama del flujo de ataque: robo masivo de credenciales, clonado, consumo de saldo y selección de nueva víctima.</em>
+</div>
 
 Con toda esta información escribo un informe y se lo envío al INCIBE para que contacten con la empresa que provee el sistema y que puedan solucionar las vulnerabilidades.
 
