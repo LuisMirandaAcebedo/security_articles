@@ -222,7 +222,9 @@ He conseguido algunas pulseras de otros festivales y las analizaré. Eso, y cóm
 ---
 
 **Investigador**: Luis Miranda Acebedo
+
 **Contacto**: luis.miranda.acebedo@gmail.com
+
 **Fecha publicación**: 28/07/2026
 
 ---
