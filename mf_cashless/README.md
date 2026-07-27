@@ -200,6 +200,7 @@ Marco las conexiones entre el chip y la antena, realizo unos pequeños y preciso
 Realizo las pruebas oportunas para ver que la pulsera modificada, además de mantener su aspecto original, tiene todas las funcionalidades de una Magic Card.
 
 Y con esto queda demostrado que la explotación real y práctica de la vulnerabilidad es posible. Tenemos una pulsera original, con su chip original anulado y un nuevo chip que podemos modificar para que se haga pasar por otra pulsera, y así poder gastar el saldo de la pulsera clonada.
+Todo esto se podría llevar a cabo sin necesidad de unos conocimientos extremadamente profundos de tecnología RFID y sin necesidad de equipamiento caro.
 
 El flujo seguido por los ciberdelincuentes podría ser algo como sigue:
 
@@ -211,7 +212,7 @@ El flujo seguido por los ciberdelincuentes podría ser algo como sigue:
 
 Con toda esta información escribo un informe y se lo envío al INCIBE para que contacten con la empresa que provee el sistema y que puedan solucionar las vulnerabilidades.
 
-Casi un año después, y justo después de la edición 2026 del festival, la información sobre la vulnerabilidad ha sido publicada[^ref3] y presuntamente corregida.
+Casi un año después, y justo después de la edición 2026 del festival, la información sobre la vulnerabilidad ha sido publicada[^ref3] y presuntamente corregida para futuros eventos. En la edición 2026 el sistema seguía siendo vulnerable.
 
 No voy a hacer ni cálculos ni especulaciones sobre el potencial impacto de esta vulnerabilidad y su "sencilla" explotación, pero teniendo en cuenta que pasan por el recinto durante los 4 días de duración de este evento unas 140.000 personas y que todos los pagos que se hacen en él (bebida, comida, merchandising) se hacen imperativamente con la pulsera, no es difícil darse cuenta de las cifras del dinero que se mueve son astronómicas.
 
