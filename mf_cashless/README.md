@@ -143,7 +143,7 @@ Como acercar un teléfono, un Flipper o un Proxmark a la muñeca de un desconoci
 
 <p align="center"><small><em>Fig. 7: Lector RFID autónomo con tarjeta SD para lectura desatendida de credenciales.</em></small></p>
 
-El dispositivo de la imagen no es más que un lector RFID, una placa con un microprocesador que intenta de forma contínua la lectura de una pulsera con las claves que hemos obtenido en pasos anteriores y que almacena el contenido de cada pulsera que lee en una tarjeta SD.
+El dispositivo de la imagen no es más que un lector RFID, una placa con un microprocesador que intenta de forma contínua la lectura de una pulsera con las claves que hemos obtenido en pasos anteriores y que almacena el contenido de cada pulsera que lee en una tarjeta SD. Todo este montaje se ocultó en la mochila aproximadamente en la posición que ocupa en la imagen.
 
 Así, con acercar a 2-3 centímetros la zona de la mochila donde se encuentra el lector a la pulsera de cualquiera, el contenido completo (en realidad lo he simplificado y sólo leo los dos sectores de memoria que he comprobado que se utilizan) de ésta queda almacenado en la tarjeta SD.
 
