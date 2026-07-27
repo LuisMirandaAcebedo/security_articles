@@ -199,7 +199,7 @@ Marco las conexiones entre el chip y la antena, realizo unos pequeños y preciso
 
 Realizo las pruebas oportunas para ver que la pulsera modificada, además de mantener su aspecto original, tiene todas las funcionalidades de una Magic Card.
 
-Y con esto queda demostrado que la explotación real y práctica de la vulnerabilidad es posible. Tenemos una pulsera original, con su chip original anulado y un nuevo chip que podemos modificar para que se haga pasar por otra pulsera, y así poder gastar el saldo de la pulsera clonada.
+Y con esto queda demostrado que la explotación real y práctica de la vulnerabilidad es posible. Tenemos una pulsera original, con su chip original anulado y un nuevo chip que podemos modificar para que se haga pasar por otra pulsera y así poder gastar el saldo de la pulsera clonada.
 Todo esto se podría llevar a cabo sin necesidad de unos conocimientos extremadamente profundos de tecnología RFID y sin necesidad de equipamiento caro.
 
 El flujo seguido por los ciberdelincuentes podría ser algo como sigue:
