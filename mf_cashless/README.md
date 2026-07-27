@@ -48,7 +48,7 @@ Después de múltiples pruebas los resultados no llegaban, así que decidí pone
 
 <p align="center"><small><em>Fig. 3: Obtención de claves satisfactoria.</em></small></p>
 
-Ahí quedó la cosa hasta que unos meses después, cuando me disponía a comprar las entradas para el Resurrection 2025, vino a mi memoria toda esta historia y la conexión de la tecnología de ambas pulseras, asi que me propuse comprobar la pulsera de 2024 con las nuevas técnicas descubiertas (que no estaban disponibles durante la celebración de esa edición).
+Ahí quedó la cosa hasta que unos meses después, cuando me disponía a comprar las entradas para el Resurrection 2025, vino a mi memoria toda esta historia y la conexión de la tecnología de ambas pulseras, así que me propuse comprobar la pulsera de 2024 con las nuevas técnicas descubiertas (que no estaban disponibles durante la celebración de esa edición).
 
 Efectivamente, la pulsera era vulnerable y pude obtener las claves y leer todo el contenido. Pues habrá que ver si las de este año (por aquel 2025) siguen siendo vulnerables.
 
@@ -84,7 +84,7 @@ El paso más sencillo a priori: Utilizar mi teléfono Android con la aplicación
 
 Pues la primera en la frente, mi teléfono detecta una tarjeta que no puede identificar y me da datos inconsistentes. Pues sí que se han tomado en serio la seguridad, no utilizan un tipo de tarjeta conocido… Pues nada, a disfrutar de los conciertos que, en realidad, a eso había ido.
 
-No, esto no acaba aquí como os imaginareis. Varias horas después recordé que, tras el olvido del año anterior de mi DNI y el consiguiente bochorno para identificarme con unas fotos del mismo que rescaté de un mensaje de Whatsapp, este año me había asegurado de llevarlo conmigo. Sí, exactamente entre el teléfono y su funda es donde lo había guardado, impidiendo que el lector NFC del móvil pudiese leer la tarjeta.
+No, esto no acaba aquí como os imaginaréis. Varias horas después recordé que, tras el olvido del año anterior de mi DNI y el consiguiente bochorno para identificarme con unas fotos del mismo que rescaté de un mensaje de Whatsapp, este año me había asegurado de llevarlo conmigo. Sí, exactamente entre el teléfono y su funda es donde lo había guardado, impidiendo que el lector NFC del móvil pudiese leer la tarjeta.
 
 Una vez subsanado el error, vuelvo a comprobar y sí, la tecnología identificada era la mil veces mencionada en este artículo Mifare Classic.
 
@@ -122,7 +122,7 @@ Además existen lo que se conocen como Magic Cards, tarjetas vírgenes a las que
 
 <p align="center"><small><em>Fig. 6: Magic Card listada en tienda online. Permite grabar cualquier UID de forma reescribible.</em></small></p>
 
-Así, grabo el contenido de mi pulsera en una Magic Card, incluído el ID, hago una lectura completa con el teléfono, le pido a la aplicación que compare ambas lecturas y, como era de esperar, son idénticas.
+Así, grabo el contenido de mi pulsera en una Magic Card, incluido el ID, hago una lectura completa con el teléfono, le pido a la aplicación que compare ambas lecturas y, como era de esperar, son idénticas.
 
 Como intentar pagar una cerveza con un llavero RFID en lugar de con la pulsera no acabaría bien, hago la prueba con el sistema de taquillas desatendido que hay en el recinto. La máquina lee el llavero como si de una pulsera legítima se tratase.
 
@@ -143,7 +143,7 @@ Como acercar un teléfono, un Flipper o un Proxmark a la muñeca de un desconoci
 
 <p align="center"><small><em>Fig. 7: Lector RFID autónomo con tarjeta SD para lectura desatendida de credenciales.</em></small></p>
 
-El dispositivo de la imagen no es más que un lector RFID, una placa con un microprocesador que intenta de forma contínua la lectura de una pulsera con las claves que hemos obtenido en pasos anteriores y que almacena el contenido de cada pulsera que lee en una tarjeta SD. Todo este montaje se ocultó en la mochila aproximadamente en la posición que ocupa en la imagen.
+El dispositivo de la imagen no es más que un lector RFID, una placa con un microprocesador que intenta de forma continua la lectura de una pulsera con las claves que hemos obtenido en pasos anteriores y que almacena el contenido de cada pulsera que lee en una tarjeta SD. Todo este montaje se ocultó en la mochila aproximadamente en la posición que ocupa en la imagen.
 
 Así, con acercar a 2-3 centímetros la zona de la mochila donde se encuentra el lector a la pulsera de cualquiera, el contenido completo (en realidad lo he simplificado y sólo leo los dos sectores de memoria que he comprobado que se utilizan) de ésta queda almacenado en la tarjeta SD.
 
@@ -179,7 +179,7 @@ Este sería el aspecto del conjunto, la nueva antena y el chip quedarían en la 
 
 Tras darle unas cuantas vueltas, me decido por una aproximación un poco más difícil, y la resumo brevemente:
 
-La idea es hacer dos microcortes por la parte trasera de la pulsera desconectando el chip de su antena, soldar el chip de una Magic Card a la antena de la propia pulsera original mediante los contactos expuestos al realizar, haciendo así el dispositivo resultante todavía más discreto y compacto. Un poco de cirujía de precisión.
+La idea es hacer dos microcortes por la parte trasera de la pulsera desconectando el chip de su antena, soldar el chip de una Magic Card a la antena de la propia pulsera original mediante los contactos expuestos al realizar, haciendo así el dispositivo resultante todavía más discreto y compacto. Un poco de cirugía de precisión.
 
 <div align="center">
   <img src="pics/11-pulsera-inspeccion-luz.png" alt="Pulsera inspeccionada con luz para ver conexiones" width="600">
