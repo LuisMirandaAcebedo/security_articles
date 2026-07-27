@@ -106,6 +106,8 @@ Por cuestiones prácticas creo un diccionario de claves en mi teléfono en la ap
 
 Comprobado, ambas pulseras se pueden leer en apenas 1 segundo con un teléfono Android una vez se han introducido las claves en el diccionario de la aplicación.
 
+Este detalle es mucho más importante de lo que parece. Significa que el esfuerzo para atacar la primera pulsera sólo hay que realizarlo una vez. A partir de ese momento, cualquier otra pulsera del festival puede leerse prácticamente de inmediato.
+
 Ya que tengo esto listo el día 2 de festival, aprovecho para leer mi pulsera tras cada recarga de saldo y cada gasto para tener datos por si después los quiero analizar.
 
 ### 5 y 6.- Comprobar si puedo clonar la tarjeta
@@ -200,7 +202,10 @@ Marco las conexiones entre el chip y la antena, realizo unos pequeños y preciso
 Realizo las pruebas oportunas para ver que la pulsera modificada, además de mantener su aspecto original, tiene todas las funcionalidades de una Magic Card.
 
 Y con esto queda demostrado que la explotación real y práctica de la vulnerabilidad es posible. Tenemos una pulsera original, con su chip original anulado y un nuevo chip que podemos modificar para que se haga pasar por otra pulsera y así poder gastar el saldo de la pulsera clonada.
-Todo esto se podría llevar a cabo sin necesidad de unos conocimientos extremadamente profundos de tecnología RFID y sin necesidad de equipamiento caro.
+
+El sistema completo confía su seguridad a una barrera criptográfica que termina siendo común para todas las pulseras, de modo que comprometer una sola abre la puerta a comprometer cualquier otra.
+
+Esa debilidad puede explotarse en un entorno real sin equipamiento especialmente sofisticado ni conocimientos fuera del alcance de un atacante motivado.
 
 El flujo seguido por los ciberdelincuentes podría ser algo como sigue:
 
