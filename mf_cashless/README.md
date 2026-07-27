@@ -80,7 +80,7 @@ El plan estaba más o menos claro, seguiría los siguientes pasos hasta encontra
 
 ### 1.- Verificar si seguían utilizando la misma tecnología
 
-El paso más sencillo a priori: Utilizar mi teléfono Android con la aplicación NFC Tools. Esta permite utilizar el lector NFC del teléfono para identificar chips RFID.
+El paso más sencillo, a priori: Utilizar mi teléfono Android con la aplicación NFC Tools. Esta permite utilizar el lector NFC del teléfono para identificar chips RFID.
 
 Pues la primera en la frente, mi teléfono detecta una tarjeta que no puede identificar y me da datos inconsistentes. Pues sí que se han tomado en serio la seguridad, no utilizan un tipo de tarjeta conocido… Pues nada, a disfrutar de los conciertos que, en realidad, a eso había ido.
 
@@ -214,7 +214,7 @@ Con toda esta información escribo un informe y se lo envío al INCIBE para que 
 
 Casi un año después, y justo después de la edición 2026 del festival, la información sobre la vulnerabilidad ha sido publicada[^ref3] y presuntamente corregida para futuros eventos. En la edición 2026 el sistema seguía siendo vulnerable.
 
-No voy a hacer ni cálculos ni especulaciones sobre el potencial impacto de esta vulnerabilidad y su "sencilla" explotación, pero teniendo en cuenta que pasan por el recinto durante los 4 días de duración de este evento unas 140.000 personas y que todos los pagos que se hacen en él (bebida, comida, merchandising) se hacen imperativamente con la pulsera, no es difícil darse cuenta de que las cifras del dinero que se mueve son astronómicas.
+No voy a hacer ni cálculos ni especulaciones sobre el potencial impacto de esta vulnerabilidad y su "sencilla" explotación, pero teniendo en cuenta que pasan por el recinto durante los 4 días de duración de este evento unas 140.000 personas y que todos los pagos que se realizan en él (bebida, comida, merchandising) se hacen imperativamente con la pulsera, no es difícil darse cuenta de que las cifras del dinero que se mueve son astronómicas.
 
 Ahora la pregunta es… ¿Qué pasa con los sistemas Cashless de otros festivales y eventos?
 
