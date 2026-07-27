@@ -4,15 +4,15 @@
 
 ## Intro
 
-En este artículo contaré mi experiencia jugando con pulseras de un sistema Cashless de los que nos podemos encontrar en eventos como festivales, en los que tanto la entrada como todos los pagos dentro del recinto se gestionan con esta pulsera[^1]. La integridad del saldo que "depositamos" en el dispositivo (en realidad en todo un sistema) depende de su seguridad, y no siempre es perfecta…
+En este artículo contaré mi experiencia jugando con pulseras de un sistema Cashless de los que nos podemos encontrar en eventos como festivales, en los que tanto la entrada como todos los pagos dentro del recinto se gestionan con esta pulsera. La integridad del saldo que "depositamos" en el dispositivo (en realidad en todo un sistema) depende de su seguridad, y no siempre es perfecta…
 
 <div align="center">
   <img src="pics/01-pulsera-cashless-festival.png" alt="Pulsera de festival Cashless" width="600">
 </div>
 
-<p align="center"><small><em>Fig. 1: Pulseras tipo Cashless utilizada en festivales para entradas y pagos.</em></small></p>
+<p align="center"><small><em>Fig. 1: Pulseras tipo Cashless utilizadas en festivales para entradas y pagos.</em></small></p>
 
-Tengo que dejar claro desde el principio que yo no soy un súper experto en tecnologías RFID (Identificación por Radiofrecuencia), pero desde hace muchos años he sentido interés por ellas y siempre que ha caído en mis manos una tarjeta o pulsera he tratado de analizarla y entender cómo funciona el sistema. También quiero dejar claro que a lo largo del artículo intentaré no entrar en detalles técnicos salvo cuando sea completamente necesario.
+Tengo que dejar claro desde el principio que yo no soy un súper experto en tecnologías RFID (Identificación por Radiofrecuencia), pero desde hace muchos años he sentido interés por ellas y siempre que ha caído en mis manos una tarjeta o pulsera he tratado de analizarla y entender cómo funciona el sistema. También quiero dejar claro que a lo largo del artículo intentaré no entrar en detalles demasiado técnicos salvo cuando sea completamente necesario.
 
 Resumiendo muchísimo, una tarjeta RFID es un dispositivo que contiene información y que puede ser leída (y escrita, en algunos casos) sin contacto, ya sean unos pocos centímetros o unos pocos metros, en función de la tecnología empleada. Ejemplos pueden ser desde la "llave" sin contacto que muchos edificios tienen hoy en día para abrir la puerta del portal o del garaje (la acercas al lector y este se abre) a las etiquetas de los artículos de Decathlon, cuyas cajas detectan la presencia y cantidad de los artículos sólo con depositarlos en un espacio concreto donde se encuentran las antenas.
 
