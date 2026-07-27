@@ -214,11 +214,11 @@ Con toda esta información escribo un informe y se lo envío al INCIBE para que 
 
 Casi un año después, y justo después de la edición 2026 del festival, la información sobre la vulnerabilidad ha sido publicada[^ref3] y presuntamente corregida para futuros eventos. En la edición 2026 el sistema seguía siendo vulnerable.
 
-No voy a hacer ni cálculos ni especulaciones sobre el potencial impacto de esta vulnerabilidad y su "sencilla" explotación, pero teniendo en cuenta que pasan por el recinto durante los 4 días de duración de este evento unas 140.000 personas y que todos los pagos que se hacen en él (bebida, comida, merchandising) se hacen imperativamente con la pulsera, no es difícil darse cuenta de las cifras del dinero que se mueve son astronómicas.
+No voy a hacer ni cálculos ni especulaciones sobre el potencial impacto de esta vulnerabilidad y su "sencilla" explotación, pero teniendo en cuenta que pasan por el recinto durante los 4 días de duración de este evento unas 140.000 personas y que todos los pagos que se hacen en él (bebida, comida, merchandising) se hacen imperativamente con la pulsera, no es difícil darse cuenta de que las cifras del dinero que se mueve son astronómicas.
 
 Ahora la pregunta es… ¿Qué pasa con los sistemas Cashless de otros festivales y eventos?
 
-He conseguido algunas pulseras de otros festivales y las analizaré. Eso, y cómo funciona y cómo de seguro es el sistema de devolución del saldo restante al finalizar el festival lo vamos a dejar para el segundo capítulo sobre este tema.
+He conseguido algunas pulseras de otros festivales y las analizaré en breve. Eso, y cómo funciona y cómo de seguro es el sistema de devolución del saldo restante al finalizar el festival lo vamos a dejar para el segundo capítulo sobre este tema.
 
 ---
 
