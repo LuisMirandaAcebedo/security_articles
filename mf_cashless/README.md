@@ -182,20 +182,20 @@ Tras darle unas cuantas vueltas, me decido por una aproximación un poco más di
 La idea es hacer dos microcortes por la parte trasera de la pulsera desconectando el chip de su antena, soldar el chip de una Magic Card a la antena de la propia pulsera original, haciendo así el dispositivo resultante todavía más discreto y compacto.
 
 <div align="center">
-  <img src="pics/11-pulsera-microcortes.png" alt="Esquema de microcortes en la pulsera" width="600">
+  <img src="pics/11-pulsera-inspeccion-luz.png" alt="Pulsera inspeccionada con luz para ver conexiones" width="600">
 </div>
 
-<p align="center"><small><em>Fig. 11: Esquema de los microcortes necesarios para desconectar el chip original de su antena.</em></small></p>
+<p align="center"><small><em>Fig. 11: Inspección de la pulsera con luz intensa para localizar las pistas de conexión chip-antena.</em></small></p>
 
 Para esto hay que inspeccionar la pulsera, y a falta de rayos X buena es una luz potente para poder ver las tripas del dispositivo.
 
 Marco las conexiones entre el chip y la antena, realizo unos pequeños y precisos cortes, y sueldo el chip de la Magic Card a la antena original de la pulsera.
 
 <div align="center">
-  <img src="pics/12-pulsera-inspeccion-luz.png" alt="Pulsera inspeccionada con luz para ver conexiones" width="600">
+  <img src="pics/12-pulsera-microcortes.png" alt="Esquema de microcortes en la pulsera" width="600">
 </div>
 
-<p align="center"><small><em>Fig. 12: Inspección de la pulsera con luz intensa para localizar las pistas de conexión chip-antena.</em></small></p>
+<p align="center"><small><em>Fig. 12: Esquema de los microcortes necesarios para desconectar el chip original de su antena.</em></small></p>
 
 Realizo las pruebas oportunas para ver que la pulsera modificada, además de mantener su aspecto original, tiene todas las funcionalidades de una Magic Card.
 
