@@ -179,7 +179,7 @@ Este sería el aspecto del conjunto, la nueva antena y el chip quedarían en la 
 
 Tras darle unas cuantas vueltas, me decido por una aproximación un poco más difícil, y la resumo brevemente:
 
-La idea es hacer dos microcortes por la parte trasera de la pulsera desconectando el chip de su antena, soldar el chip de una Magic Card a la antena de la propia pulsera original, haciendo así el dispositivo resultante todavía más discreto y compacto.
+La idea es hacer dos microcortes por la parte trasera de la pulsera desconectando el chip de su antena, soldar el chip de una Magic Card a la antena de la propia pulsera original mediante los contactos expuestos al realizar, haciendo así el dispositivo resultante todavía más discreto y compacto. Un poco de cirujía de precisión.
 
 <div align="center">
   <img src="pics/11-pulsera-inspeccion-luz.png" alt="Pulsera inspeccionada con luz para ver conexiones" width="600">
