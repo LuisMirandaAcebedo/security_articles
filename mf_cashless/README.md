@@ -22,7 +22,7 @@ Resumiendo muchísimo, una tarjeta RFID es un dispositivo que contiene informaci
 
 <p align="center"><small><em>Fig. 2: Ejemplo de dispositivos RFID: llaveros para portales y control de accesos.</em></small></p>
 
-En el pasado he estudiado alguna tarjeta de pago de sistemas de vending. Se trataba de sistemas de monedero offline, esto es, el saldo se encontraba almacenado en la tarjeta y toda la seguridad recaía en la seguridad de la propia tarjeta y en mecanismos implementados para darle más integridad al contenido de la misma. En general solían ser bastante pirateables. Las que cayeron en mis manos usaban tecnología Mifare Classic, un estándar que emplea un cifrado proprietario llamado Crypto1 para proteger la comunicación entre tarjeta y lector. Esta tecnología es bien conocida por varios fallos de seguridad[^ref1] y ataques prácticos que permiten explotarlos para acceder a todo el contenido de la tarjeta y manipularlo pese a estar protegidos por contraseña. A partir de ahí sólo había que encontrar dónde se almacenaba el saldo, en qué formato y qué funciones de checksum usaban las máquinas para comprobar que el contenido no se había manipulado. Nada que unas cuantas tardes de trabajo no solucionasen.
+En el pasado he estudiado alguna tarjeta de pago de sistemas de vending. Se trataba de sistemas de monedero offline, esto es, el saldo se encontraba almacenado en la tarjeta y toda la seguridad recaía en la seguridad de la propia tarjeta y en mecanismos implementados para darle más integridad al contenido de la misma. En general solían ser bastante pirateables. Las que cayeron en mis manos usaban tecnología Mifare Classic, un estándar que emplea un cifrado proprietario llamado Crypto1 para proteger la comunicación entre tarjeta y lector. Esta tecnología es bien conocida por varios fallos de seguridad[^ref1] y ataques prácticos que permiten explotarlos para acceder a todo el contenido de la tarjeta y manipularlo pese a estar protegidos por contraseña. A partir de ahí sólo había que encontrar dónde se almacenaba el saldo, en qué formato y qué funciones de checksum usaban las máquinas para comprobar que el contenido no se había manipulado. Tras varias sesiones de análisis fue posible identificar la estructura de los datos y reproducir el funcionamiento del sistema.
 
 El sistema de pago que vamos a analizar aquí es un sistema online, donde existe una infraestructura (servidor o servicios en la nube) que centraliza los saldos y la información de las transacciones realizadas. Los lectores con los que cuentan tanto en los puntos de recarga como en los lugares donde se efectúan cobros, están conectados con esta infraestructura (la cual podemos ver como un servidor central, para simplificar).
 
@@ -155,7 +155,7 @@ Con esto, la primera parte queda resuelta. Nadie sospecharía en un recinto con 
 
 <p align="center"><small><em>Fig. 8: Prueba de campo con lectura oculta a distancia de contacto.</em></small></p>
 
-Una breve prueba con mis compañeros de festival demuestra su efectividad.
+Una breve prueba realizada con mis compañeros de festival confirmó que el sistema funcionaba tal y como esperaba.
 
 Segunda parte, modificar una pulsera legítima para que mantenga su aspecto pero que nos permita clonar la de una potencial víctima.
 
@@ -216,9 +216,7 @@ Casi un año después, y justo después de la edición 2026 del festival, la inf
 
 No voy a hacer ni cálculos ni especulaciones sobre el potencial impacto de esta vulnerabilidad y su "sencilla" explotación, pero teniendo en cuenta que pasan por el recinto durante los 4 días de duración de este evento unas 140.000 personas y que todos los pagos que se realizan en él (bebida, comida, merchandising) se hacen imperativamente con la pulsera, no es difícil darse cuenta de que las cifras del dinero que se mueve son astronómicas.
 
-Ahora la pregunta es… ¿Qué pasa con los sistemas Cashless de otros festivales y eventos?
-
-He conseguido algunas pulseras de otros festivales y las analizaré en breve. Eso, y cómo funciona y cómo de seguro es el sistema de devolución del saldo restante al finalizar el festival lo vamos a dejar para el segundo capítulo sobre este tema.
+Queda por responder una cuestión igual de interesante: ¿presentan otros sistemas Cashless los mismos problemas o se trata de un caso aislado? Responder esa pregunta y analizar cómo de seguro es el sistema de devolución de saldo no gastado será el objetivo de la segunda parte.
 
 ---
 
