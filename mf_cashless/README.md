@@ -220,9 +220,11 @@ Ahora la pregunta es… ¿Qué pasa con los sistemas Cashless de otros festivale
 He conseguido algunas pulseras de otros festivales y las analizaré. Eso, y cómo funciona y cómo de seguro es el sistema de devolución del saldo restante al finalizar el festival lo vamos a dejar para el segundo capítulo sobre este tema.
 
 ---
+
 **Investigador**: Luis Miranda Acebedo
 **Contacto**: luis.miranda.acebedo@gmail.com
 **Fecha publicación**: 28/07/2026
+
 ---
 
 *Disclaimer: Los comandos exactos empleados para la obtención de claves, así como el esquema y código fuente del sistema de robo de credenciales no los he publicado por una cuestión de responsabilidad, pero pueden ser proporcionados para otras investigaciones y trabajos que lo justifiquen.*
