@@ -22,9 +22,9 @@ Resumiendo muchísimo, una tarjeta RFID es un dispositivo que contiene informaci
 
 <p align="center"><small><em>Fig. 2: Ejemplo de dispositivos RFID: llaveros para portales y control de accesos.</em></small></p>
 
-En el pasado he estudiado alguna tarjeta de pago de sistemas de vending. Se trataba de sistemas de monedero offline, esto es, el saldo se encontraba almacenado en la tarjeta y toda la seguridad recaía en la seguridad de la propia tarjeta y en mecanismos implementados para darle más integridad al contenido de la misma. En general solían ser bastante pirateables. Las que cayeron en mis manos usaban tecnología Mifare Classic, un estándar que emplea un cifrado proprietario llamado Crypto1 para proteger la comunicación entre tarjeta y lector. Esta tecnología es bien conocida por varios fallos de seguridad[^ref1] y ataques prácticos que permiten explotarlos para acceder a todo el contenido de la tarjeta y manipularlo pese a estar protegidos por contraseña. A partir de ahí sólo había que encontrar dónde se almacenaba el saldo, en qué formato y qué funciones de checksum las máquinas usaban para comprobar que el contenido no se había manipulado. Nada que unas cuantas tardes de trabajo no solucionasen.
+En el pasado he estudiado alguna tarjeta de pago de sistemas de vending. Se trataba de sistemas de monedero offline, esto es, el saldo se encontraba almacenado en la tarjeta y toda la seguridad recaía en la seguridad de la propia tarjeta y en mecanismos implementados para darle más integridad al contenido de la misma. En general solían ser bastante pirateables. Las que cayeron en mis manos usaban tecnología Mifare Classic, un estándar que emplea un cifrado proprietario llamado Crypto1 para proteger la comunicación entre tarjeta y lector. Esta tecnología es bien conocida por varios fallos de seguridad[^ref1] y ataques prácticos que permiten explotarlos para acceder a todo el contenido de la tarjeta y manipularlo pese a estar protegidos por contraseña. A partir de ahí sólo había que encontrar dónde se almacenaba el saldo, en qué formato y qué funciones de checksum usaban las máquinas para comprobar que el contenido no se había manipulado. Nada que unas cuantas tardes de trabajo no solucionasen.
 
-El sistema de pago que vamos a analizar aquí es un sistema online, donde existe una infraestructura (servidor o en la nube) que centraliza los saldos y la información de las transacciones realizadas. Los lectores con los que cuentan tanto en los puntos de recarga como en los lugares donde se efectúan cobros, están conectados con esta infraestructura (la cual podemos ver como un servidor central, para simplificar).
+El sistema de pago que vamos a analizar aquí es un sistema online, donde existe una infraestructura (servidor o servicios en la nube) que centraliza los saldos y la información de las transacciones realizadas. Los lectores con los que cuentan tanto en los puntos de recarga como en los lugares donde se efectúan cobros, están conectados con esta infraestructura (la cual podemos ver como un servidor central, para simplificar).
 
 ## La historia
 
@@ -48,7 +48,7 @@ Después de múltiples pruebas los resultados no llegaban, así que decidí pone
 
 <p align="center"><small><em>Fig. 3: Obtención de claves satisfactoria.</em></small></p>
 
-Ahí quedó la cosa hasta que unos meses después, cuando me disponía a comprar las entradas para el Resurrection 2025, vino a mi memoria toda esta historia y la conexión de la tecnología de ambas pulseras, asi que me propuse comprobar la pulsera de 2024, con las nuevas técnicas descubiertas (que no estaban disponibles durante la celebración de esa edición).
+Ahí quedó la cosa hasta que unos meses después, cuando me disponía a comprar las entradas para el Resurrection 2025, vino a mi memoria toda esta historia y la conexión de la tecnología de ambas pulseras, asi que me propuse comprobar la pulsera de 2024 con las nuevas técnicas descubiertas (que no estaban disponibles durante la celebración de esa edición).
 
 Efectivamente, la pulsera era vulnerable y pude obtener las claves y leer todo el contenido. Pues habrá que ver si las de este año (por aquel 2025) siguen siendo vulnerables.
 
@@ -56,7 +56,7 @@ Aquí tengo que hacer una pausa para explicar qué implicaciones tiene esto.
 
 Como he comentado, los sistemas de pago Cashless que he analizado en la actualidad (lo cual no quiere decir que todos sean así) son online y esto permite, por ejemplo, que desde la web de tu banco o del propio festival puedas hacer una recarga de saldo sin tener que usar físicamente la pulsera.
 
-Puede parecer que esto hace el sistema mucho más seguro que un sistema offline, y en general así lo es, pero también tiene un problema, y es que si soy capaz de hacer una copia idéntica de tu pulsera y la uso antes que tú desde el momento en que la leo, gastaré tu saldo y probablemente anularé tu pulsera porque los datos modificados en la última transacción no estarán reflejados en tu pulsera.
+Puede parecer que esto hace el sistema mucho más seguro que un sistema offline, y en general así lo es, pero también tiene un problema, y es que si soy capaz de hacer una copia idéntica de tu pulsera y la uso antes que tú desde el momento en que la leo, gastaré tu saldo y probablemente tu pulsera quedará anulada cuando la quieras usar porque los datos modificados en la última transacción no estarán reflejados en tu pulsera.
 
 ## El plan
 
@@ -147,7 +147,7 @@ El dispositivo de la imagen no es más que un lector RFID, una placa con un micr
 
 Así, con acercar a 2-3 centímetros la zona de la mochila donde se encuentra el lector a la pulsera de cualquiera, el contenido completo (en realidad lo he simplificado y sólo leo los dos sectores de memoria que he comprobado que se utilizan) de ésta queda almacenado en la tarjeta SD.
 
-Con esto, la primera parte queda resuelta. Nadie sospecharía en un recinto con 30.000 o 40.000 personas de alguien que, en la multitud, roza con su mochila su muñeca. Como el dispositivo hace lecturas contínuas, el sistema permite robar credenciales de forma más o menos masiva sin intervención, más allá de portar la mochila.
+Con esto, la primera parte queda resuelta. Nadie sospecharía en un recinto con 30.000 o 40.000 personas de alguien que, en la multitud, roza con una mochila su muñeca. Como el dispositivo hace lecturas contínuas, el sistema permite robar credenciales de forma más o menos masiva sin intervención, más allá de portar la mochila.
 
 <div align="center">
   <img src="pics/08-prueba-efectividad.png" alt="Prueba de efectividad con compañeros" width="600">
