@@ -219,7 +219,7 @@ Con toda esta información escribo un informe y se lo envío al INCIBE para que 
 
 Casi un año después, y justo después de la edición 2026 del festival, la información sobre la vulnerabilidad ha sido publicada[^ref3][^ref4] y presuntamente corregida para futuros eventos. En la edición 2026 el sistema seguía siendo vulnerable.
 
-No voy a hacer ni cálculos ni especulaciones sobre el potencial impacto de esta vulnerabilidad y su "sencilla" explotación, pero teniendo en cuenta que pasan por el recinto durante los 4 días de duración de este evento unas 140.000 personas y que todos los pagos que se realizan en él (bebida, comida, merchandising) se hacen imperativamente con la pulsera, no es difícil darse cuenta de que las cifras del dinero que se mueve son astronómicas.
+No voy a hacer ni cálculos ni especulaciones sobre el potencial impacto de esta vulnerabilidad y su "sencilla" explotación, pero teniendo en cuenta que pasan por el recinto durante los 4 días de duración de este evento unas 140.000 personas y que todos los pagos que se realizan en él (bebida, comida, merchandising) se hacen imperativamente con la pulsera, no es difícil darse cuenta de que las cifras del dinero que se mueven son astronómicas.
 
 Queda por responder una cuestión igual de interesante: ¿presentan otros sistemas Cashless los mismos problemas o se trata de un caso aislado? Responder esa pregunta y analizar cómo de seguro es el sistema de devolución de saldo no gastado será el objetivo de la segunda parte.
 
