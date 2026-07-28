@@ -217,7 +217,7 @@ El flujo seguido por los ciberdelincuentes podría ser algo como sigue:
 
 Con toda esta información escribo un informe y se lo envío al INCIBE para que contacten con la empresa que provee el sistema y que puedan solucionar las vulnerabilidades.
 
-Casi un año después, y justo después de la edición 2026 del festival, la información sobre la vulnerabilidad ha sido publicada[^ref3] y presuntamente corregida para futuros eventos. En la edición 2026 el sistema seguía siendo vulnerable.
+Casi un año después, y justo después de la edición 2026 del festival, la información sobre la vulnerabilidad ha sido publicada[^ref3][^ref4] y presuntamente corregida para futuros eventos. En la edición 2026 el sistema seguía siendo vulnerable.
 
 No voy a hacer ni cálculos ni especulaciones sobre el potencial impacto de esta vulnerabilidad y su "sencilla" explotación, pero teniendo en cuenta que pasan por el recinto durante los 4 días de duración de este evento unas 140.000 personas y que todos los pagos que se realizan en él (bebida, comida, merchandising) se hacen imperativamente con la pulsera, no es difícil darse cuenta de que las cifras del dinero que se mueve son astronómicas.
 
@@ -238,5 +238,6 @@ Queda por responder una cuestión igual de interesante: ¿presentan otros sistem
 [^ref1]: https://eprint.iacr.org/2009/137.pdf
 [^ref2]: https://eprint.iacr.org/2024/1275.pdf
 [^ref3]: https://www.cve.org/CVERecord?id=CVE-2026-4648
+[^ref4]: https://www.incibe.es/incibe-cert/alerta-temprana/avisos/nivel-de-cifrado-insuficiente-en-pulseras-nfc-de-casfid-servicios-tecnologicos
 
 
